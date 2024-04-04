@@ -1,0 +1,74 @@
+<svg fill="none" viewBox="0 0 800 300" width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <style>
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-family: "Iosevka Extended", monospace;
+            font-weight: 500;
+            font-style: normal;
+          }
+
+          .title {
+            font-size: 1em;
+            width: 30%;
+          }
+          
+          .content {
+            font-size: 0.85em;
+            width: 70%;
+            padding-right: 10px;
+          }
+          
+          <!-- adapt to both dark & light themes -->
+          @media (prefers-color-scheme: light) {
+            .container {
+              --color-main: #F15BB5;
+              --color-primary: #24b0ef;
+              --color-secondary: #4526f6;
+              --color-tertiary: #f6f645;
+            }
+          }
+          
+          <!-- keyframes for the animation -->
+          @keyframes anim {
+            0% {transform: rotate(0.0deg);}
+            25% {transform: rotate(720.0deg);}
+            75% {transform: translateX(750px);}
+            100% {transform: translateX(750px) rotate(720.0deg);}
+          }
+  
+          @media {prefers-reduced-motion} {
+            .anim {
+              animation: none;
+            }
+          }
+          
+          .anim {
+            animation: 3.0s linear 0s infinite alternate anim;
+            display: inline-block;
+          }
+        </style>
+      </head>
+      <div class="container">
+        <div class="title">
+          <h1>Welcome to my personal Github page<br/><div class="anim">🐧</div></h1>
+        </div>
+        <div class="content">
+          This repository mostly deals with my side projects, 
+          stuff I've been involved with since my high-school days, for fun! <br/>
+          Please note that the list is not complete, back then I didn't use 
+          to push <i>everything</i> I was doing on github, so I'm still trying to collect my old code 
+          and archive it here. 
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
